@@ -9,7 +9,7 @@ const steps = [
   {
     number: "02",
     title: "Diseña tu flujo",
-    description: "Arrastra, conecta y configura cada paso de tu automatización visualmente.",
+    description: "Arrastra, conecta y configura cada paso de tu automatización visualmente. Bien",
   },
   {
     number: "03",
