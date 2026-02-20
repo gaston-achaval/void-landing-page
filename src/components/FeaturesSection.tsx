@@ -46,8 +46,7 @@ const item = {
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="relative py-32">
-      <div className="absolute inset-0 bg-glow opacity-50" />
+    <section id="features" className="relative py-32 bg-secondary/30">
       <div className="container relative mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,7 +55,7 @@ const FeaturesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl font-bold sm:text-4xl lg:text-5xl text-foreground">
             Todo lo que necesitas para <span className="text-gradient">automatizar</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -75,9 +74,9 @@ const FeaturesSection = () => {
             <motion.div
               key={feature.title}
               variants={item}
-              className="group rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:glow"
+              className="group rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10"
             >
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/15 to-accent/10 text-primary transition-colors group-hover:from-primary/25 group-hover:to-accent/20">
                 <feature.icon className="h-6 w-6" />
               </div>
               <h3 className="font-display text-lg font-semibold text-foreground">{feature.title}</h3>
