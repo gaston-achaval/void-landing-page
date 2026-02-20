@@ -30,9 +30,6 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="sm">
-            Iniciar sesión
-          </Button>
           <Button variant="glow" size="sm">
             Empezar gratis
           </Button>
