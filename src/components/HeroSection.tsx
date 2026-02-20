@@ -1,23 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Zap } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background layers */}
-      <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute inset-0 bg-glow" />
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+      {/* Lovable-style vibrant blurred gradient background */}
+      <div className="absolute inset-0 bg-hero-gradient" />
+      <div className="absolute inset-0 bg-background/30" />
 
       <div className="container relative mx-auto px-6 text-center">
         <motion.div
@@ -30,13 +20,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm text-primary"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/8 px-4 py-1.5 text-sm text-primary font-medium"
           >
             <Zap className="h-3.5 w-3.5" />
             Automatización inteligente
           </motion.div>
 
-          <h1 className="font-display text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="font-display text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl lg:text-7xl">
             Automatiza todo.
             <br />
             <span className="text-gradient">No dejes nada al azar.</span>

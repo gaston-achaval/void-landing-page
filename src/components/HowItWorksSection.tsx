@@ -29,7 +29,7 @@ const HowItWorksSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl font-bold sm:text-4xl lg:text-5xl text-foreground">
             Tan simple como <span className="text-gradient">1, 2, 3</span>
           </h2>
         </motion.div>
@@ -44,7 +44,7 @@ const HowItWorksSection = () => {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="relative text-center"
             >
-              <div className="mb-6 font-display text-6xl font-bold text-primary/20">{step.number}</div>
+              <div className="mb-6 font-display text-6xl font-bold text-gradient opacity-60">{step.number}</div>
               <h3 className="font-display text-xl font-semibold text-foreground">{step.title}</h3>
               <p className="mt-3 text-muted-foreground leading-relaxed">{step.description}</p>
               {index < steps.length - 1 && (
