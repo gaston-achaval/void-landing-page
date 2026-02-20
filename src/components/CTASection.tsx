@@ -5,18 +5,21 @@ import { ArrowRight } from "lucide-react";
 const CTASection = () => {
   return (
     <section id="pricing" className="relative py-32 overflow-hidden">
-      {/* Vibrant background similar to hero */}
-      <div className="absolute inset-0 bg-hero-gradient opacity-60" />
-      <div className="absolute inset-0 bg-background/40" />
+      {/* Background blobs */}
+      <div className="absolute inset-0 bg-background" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/12 blur-3xl" />
+      <div className="absolute top-1/3 right-0 w-80 h-80 rounded-full bg-accent/10 blur-3xl" />
+      <div className="absolute bottom-1/3 left-0 w-80 h-80 rounded-full bg-orange-500/8 blur-3xl" />
+
       <div className="container relative mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mx-auto max-w-3xl rounded-3xl border border-border/60 bg-background/80 backdrop-blur-sm p-12 text-center shadow-xl"
+          className="mx-auto max-w-3xl rounded-3xl border border-primary/20 bg-card/80 backdrop-blur-sm p-12 text-center glow"
         >
-          <h2 className="font-display text-3xl font-bold sm:text-4xl text-foreground">
+          <h2 className="font-display text-3xl font-bold sm:text-4xl">
             Listo para <span className="text-gradient">automatizar</span>?
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
