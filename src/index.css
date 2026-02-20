@@ -6,54 +6,65 @@
 
 @layer base {
   :root {
-    --background: 0 0% 99%;
-    --foreground: 240 10% 10%;
+    --background: 260 25% 5%;
+    --foreground: 260 10% 93%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --card: 260 22% 8%;
+    --card-foreground: 260 10% 93%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
+    --popover: 260 22% 8%;
+    --popover-foreground: 260 10% 93%;
 
-    --primary: 330 85% 60%;
+    --primary: 270 85% 62%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 10% 20%;
+    --secondary: 260 20% 12%;
+    --secondary-foreground: 260 10% 80%;
 
-    --muted: 240 5% 94%;
-    --muted-foreground: 240 5% 45%;
+    --muted: 260 18% 10%;
+    --muted-foreground: 260 10% 48%;
 
-    --accent: 260 80% 65%;
+    --accent: 350 80% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 5% 88%;
-    --input: 240 5% 88%;
-    --ring: 330 85% 60%;
+    --border: 260 18% 16%;
+    --input: 260 18% 16%;
+    --ring: 270 85% 62%;
 
     --radius: 0.875rem;
 
-    --glow-primary: 0 8px 40px hsl(330 85% 60% / 0.25);
-    --glow-strong: 0 12px 60px hsl(330 85% 60% / 0.35);
-    --gradient-primary: linear-gradient(135deg, hsl(330 85% 60%), hsl(260 80% 65%));
-    --gradient-hero: radial-gradient(ellipse 80% 60% at 20% 30%, hsl(230 80% 65% / 0.5), transparent 60%),
-                     radial-gradient(ellipse 60% 50% at 80% 20%, hsl(330 85% 65% / 0.45), transparent 60%),
-                     radial-gradient(ellipse 70% 60% at 60% 80%, hsl(350 90% 60% / 0.4), transparent 60%),
-                     radial-gradient(ellipse 50% 40% at 10% 70%, hsl(260 70% 70% / 0.35), transparent 60%);
-    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%), hsl(240 5% 97%));
-    --gradient-glow: radial-gradient(ellipse at center, hsl(330 85% 60% / 0.06), transparent 70%);
+    /* Glow effects */
+    --glow-primary: 0 0 40px hsl(270 85% 62% / 0.35);
+    --glow-strong: 0 0 80px hsl(270 85% 62% / 0.5);
+    --glow-red: 0 0 40px hsl(350 80% 58% / 0.35);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 10% 20%;
-    --sidebar-primary: 330 85% 60%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 85% 62%), hsl(350 80% 58%));
+    --gradient-fire: linear-gradient(135deg, hsl(350 80% 58%), hsl(25 90% 57%));
+    --gradient-cool: linear-gradient(135deg, hsl(270 85% 62%), hsl(195 85% 57%));
+
+    /* Hero blobs */
+    --gradient-hero:
+      radial-gradient(ellipse 65% 55% at 10% 20%, hsl(270 85% 55% / 0.6), transparent 65%),
+      radial-gradient(ellipse 50% 45% at 90% 15%, hsl(350 80% 52% / 0.5), transparent 60%),
+      radial-gradient(ellipse 55% 50% at 75% 85%, hsl(25 90% 52% / 0.38), transparent 60%),
+      radial-gradient(ellipse 40% 38% at 2% 85%, hsl(195 85% 55% / 0.32), transparent 60%),
+      radial-gradient(ellipse 80% 70% at 50% 50%, hsl(280 60% 8% / 0.55), transparent 100%);
+
+    --gradient-surface: linear-gradient(180deg, hsl(260 22% 8%), hsl(260 25% 5%));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(270 85% 62% / 0.1), transparent 70%);
+
+    --sidebar-background: 260 22% 6%;
+    --sidebar-foreground: 260 10% 80%;
+    --sidebar-primary: 270 85% 62%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 5% 94%;
-    --sidebar-accent-foreground: 240 10% 20%;
-    --sidebar-border: 240 5% 88%;
-    --sidebar-ring: 330 85% 60%;
+    --sidebar-accent: 260 20% 12%;
+    --sidebar-accent-foreground: 260 10% 80%;
+    --sidebar-border: 260 18% 16%;
+    --sidebar-ring: 270 85% 62%;
   }
 }
 
@@ -78,6 +89,16 @@
     background-image: var(--gradient-primary);
   }
 
+  .text-gradient-fire {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-fire);
+  }
+
+  .text-gradient-cool {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-cool);
+  }
+
   .glow {
     box-shadow: var(--glow-primary);
   }
@@ -86,10 +107,14 @@
     box-shadow: var(--glow-strong);
   }
 
+  .glow-red {
+    box-shadow: var(--glow-red);
+  }
+
   .bg-grid {
-    background-image: 
-      linear-gradient(hsl(240 5% 88% / 0.6) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(240 5% 88% / 0.6) 1px, transparent 1px);
+    background-image:
+      linear-gradient(hsl(260 18% 16% / 0.6) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(260 18% 16% / 0.6) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
@@ -99,5 +124,9 @@
 
   .bg-hero-gradient {
     background-image: var(--gradient-hero);
+  }
+
+  .card-glow {
+    box-shadow: 0 0 0 1px hsl(270 85% 62% / 0.15), 0 8px 32px hsl(270 85% 62% / 0.12);
   }
 }
