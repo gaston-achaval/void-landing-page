@@ -1,12 +1,12 @@
+import Logo from "@/components/Logo";
+
 const Footer = () => {
   return (
     <footer className="border-t border-border/60 py-12 bg-card/30">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="font-display text-xs font-bold text-white">V</span>
-            </div>
+            <Logo size="sm" />
             <span className="font-display text-lg font-bold text-foreground">void</span>
           </div>
 
