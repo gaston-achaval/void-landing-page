@@ -42,19 +42,12 @@ const HeroSection = () => {
             Sin código. Sin fricción. Sin límites.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-10 flex justify-center">
             <Button variant="glow" size="lg" className="text-base px-8">
-              Comenzar ahora
+              Hablar con ventas
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="ghost-light" size="lg" className="text-base px-8">
-              Ver demo
-            </Button>
           </div>
-
-          <p className="mt-6 text-xs text-muted-foreground">
-            Gratis para empezar · Sin tarjeta de crédito
-          </p>
         </motion.div>
       </div>
     </section>
