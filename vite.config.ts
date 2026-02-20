@@ -4,7 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
+// BASE_PATH: en GitHub Pages usa el nombre del repo (ej: /void-automation-hub-15/)
 export default defineConfig(({ mode }) => ({
+  base: process.env.BASE_PATH ?? "/",
   server: {
     host: "::",
     port: 8080,

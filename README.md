@@ -4,6 +4,48 @@
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
+---
+
+## Ver cambios en vivo (desarrollo local con Cursor)
+
+Sí, puedes ver en el navegador cada cambio que hagas, con recarga automática (hot reload).
+
+1. **Instala dependencias** (solo la primera vez):
+   ```bash
+   npm i
+   ```
+
+2. **Arranca el servidor de desarrollo**:
+   ```bash
+   npm run dev
+   ```
+
+3. Abre en el navegador: **http://localhost:8080**  
+   Al guardar cambios en cualquier archivo, la página se actualiza sola.
+
+Para dejar de ver en vivo, detén el servidor con `Ctrl+C` en la terminal.
+
+---
+
+## Publicar en GitHub Pages (sitio estático)
+
+El proyecto está preparado para publicarse como **sitio estático** en GitHub Pages.
+
+1. En el repo de GitHub: **Settings → Pages**.
+2. En **Source** elige **GitHub Actions** (no “Deploy from a branch”).
+3. Cada vez que hagas **push a la rama `main`**, GitHub Actions construirá el sitio y lo publicará.
+
+La URL quedará: `https://<tu-usuario>.github.io/void-automation-hub-15/`
+
+Para probar el build estático en local antes de subir:
+```bash
+BASE_PATH=/void-automation-hub-15/ npm run build
+npm run preview
+```
+Luego abre la URL que muestre `preview` (por ejemplo http://localhost:4173).
+
+---
+
 ## How can I edit this code?
 
 There are several ways of editing your application.

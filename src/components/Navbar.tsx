@@ -24,9 +24,6 @@ const Navbar = () => {
           <a href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Cómo funciona
           </a>
-          <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            Precios
-          </a>
         </div>
 
         <div className="flex items-center gap-3">
