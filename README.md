@@ -63,3 +63,29 @@ También puedes editar archivos directamente en GitHub (botón "Edit" en cada ar
 ## Despliegue
 
 Para publicar en GitHub Pages, configura **Settings → Pages → Source: GitHub Actions** y haz push a `main`. El workflow publicará el sitio automáticamente.
+
+---
+
+## Dominio personalizado (URL más corta y bonita)
+
+La URL por defecto de GitHub Pages es larga: `https://<usuario>.github.io/void-automation-hub-15/`. Puedes usar un **dominio propio** (ej. `voidsoftware.com` o `void.so`) de forma gratuita:
+
+1. **Compra el dominio** en un registrador (Namecheap, Google Domains, Cloudflare, etc.).
+2. **En el repo**: crea el archivo `public/CNAME` (o `CNAME` en la raíz del repo, según la doc de GitHub) con una sola línea: tu dominio, ej. `www.voidsoftware.com`.
+3. **En GitHub**: **Settings → Pages → Custom domain** → escribe tu dominio y guarda. GitHub te mostrará los registros DNS que debes configurar.
+4. **En el registrador del dominio**: añade los registros que indica GitHub (normalmente un registro **A** apuntando a las IPs de GitHub Pages, o un **CNAME** de `www` a `tu-usuario.github.io`).
+5. **Cuando tengas el dominio**: en `index.html` sustituye `https://TU-URL-BASE/` por tu URL real (ej. `https://www.voidsoftware.com/`) en las meta `og:url` y `og:image`, y añade una imagen `public/og-image.png` (recomendado 1200×630 px) para las vistas previas en redes.
+
+Si usas el sitio **solo en la raíz** de tu usuario (`username.github.io`), el `BASE_PATH` puede ser `"/"` y no necesitas carpeta en la URL.
+
+---
+
+## Validación con Meta (Facebook / Business)
+
+Para que Meta reconozca bien tu sitio y puedas usar dominios en el Business Manager o en enlaces de WhatsApp:
+
+1. **Meta tags** (ya están en `index.html`): cuando tengas la URL definitiva, reemplaza `https://TU-URL-BASE/` por tu dominio real en `og:url` y `og:image`.
+2. **Imagen de vista previa**: pon una imagen en `public/og-image.png` (1200×630 px) para que los enlaces se vean bien al compartir.
+3. **Verificación de dominio**: si Meta te pide verificar el dominio, te dará un archivo tipo `facebook-domain-verification-xxxxx.html`. Colócalo en `public/` (junto a `robots.txt`). Tras el siguiente deploy estará en `https://tu-dominio/facebook-domain-verification-xxxxx.html` y Meta podrá comprobar que el dominio es tuyo.
+
+El `robots.txt` ya permite al crawler de Meta (`facebookexternalhit`), así que no hace falta cambiarlo.
