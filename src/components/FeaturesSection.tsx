@@ -4,32 +4,32 @@ import { Workflow, Bot, Link, BarChart3, Shield, Clock } from "lucide-react";
 const features = [
   {
     icon: Workflow,
-    title: "Flujos visuales",
-    description: "Diseña automatizaciones complejas con nuestro editor drag & drop intuitivo.",
+    title: "Procesamiento automático de comprobantes",
+    description: "Carga y extracción automática de datos desde comprobantes para evitar ingreso manual y errores.",
     color: "from-primary/20 to-primary/5 text-primary",
   },
   {
     icon: Bot,
-    title: "IA integrada",
-    description: "Agentes inteligentes que toman decisiones y ejecutan acciones por ti.",
+    title: "Gestión centralizada de proveedores",
+    description: "Toda la información de proveedores, comprobantes y estados de pago organizada en un solo lugar.",
     color: "from-accent/20 to-accent/5 text-accent",
   },
   {
     icon: Link,
-    title: "+200 integraciones",
-    description: "Conecta con Slack, Gmail, Notion, HubSpot, Stripe y más herramientas.",
+    title: "Control de pagos y vencimientos",
+    description: "Seguimiento claro de pagos realizados y pendientes para mejorar la planificación financiera. ",
     color: "from-orange-500/20 to-orange-500/5 text-orange-400",
   },
   {
     icon: BarChart3,
-    title: "Analytics en tiempo real",
-    description: "Monitorea el rendimiento de cada flujo y optimiza en tiempo real.",
+    title: "Alertas y seguimiento operativo",
+    description: "Notificaciones automáticas sobre vencimientos.",
     color: "from-primary/20 to-primary/5 text-primary",
   },
   {
     icon: Shield,
-    title: "Seguridad enterprise",
-    description: "Encriptación end-to-end, SSO y cumplimiento SOC 2 incluido.",
+    title: "Visibilidad operativa",
+    description: "Panel simple para entender rápidamente el estado de tus procesos y tomar decisiones con información actualizada.",
     color: "from-cyan-500/20 to-cyan-500/5 text-cyan-400",
   },
   {
