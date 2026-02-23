@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
 
           <p className="text-sm text-muted-foreground">
-            © 2026 Void. Todos los derechos reservados.
+            © 2026 Void. Todos los derechos reservados
           </p>
         </div>
       </div>
