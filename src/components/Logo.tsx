@@ -30,7 +30,8 @@ const Logo = ({ size = "md" }: { size?: LogoSize }) => {
     );
   }
 
-  const logoSrc = tryPng ? "/logo.png" : "/logo.svg";
+  const base = import.meta.env.BASE_URL;
+  const logoSrc = tryPng ? `${base}logo.png` : `${base}logo.svg`;
   return (
     <img
       src={logoSrc}
