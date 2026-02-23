@@ -9,14 +9,14 @@ const steps = [
   },
   {
     number: "02",
-    title: "Diseña tu flujo",
-    description: "Arrastra, conecta y configura cada paso de tu automatización visualmente. Bien",
+    title: "Implementación rápida",
+    description: "Dentro de las siguientes 48hs ya tenés corriendo el sistema en tu dispositivo.",
     gradient: "text-gradient",
   },
   {
     number: "03",
-    title: "Activa y escala",
-    description: "Lanza tu automatización y déjala correr. Void se encarga del resto.",
+    title: "Escalá sin límites",
+    description: "Te ayudamos a crecer y nos adaptamos a tu nueva infraestructura sin costos extra.",
     gradient: "text-gradient-fire",
   },
 ];

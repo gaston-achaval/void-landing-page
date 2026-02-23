@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/Logo";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -26,8 +27,10 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <Button variant="glow" size="sm">
-            Hablar con ventas
+          <Button variant="glow" size="sm" asChild>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              Hablar con ventas
+            </a>
           </Button>
         </div>
       </div>

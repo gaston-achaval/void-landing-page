@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -26,9 +27,11 @@ const CTASection = () => {
             Únete a miles de equipos que ya eliminaron el trabajo manual con Void.
           </p>
           <div className="mt-8 flex justify-center">
-            <Button variant="glow" size="lg" className="text-base px-8">
-              Hablar con ventas
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button variant="glow" size="lg" className="text-base px-8" asChild>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                Hablar con ventas
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
             </Button>
           </div>
         </motion.div>
