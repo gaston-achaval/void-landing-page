@@ -24,7 +24,7 @@ const CTASection = () => {
             Listo para <span className="text-gradient">automatizar</span>?
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Únete a miles de equipos que ya eliminaron el trabajo manual con Void.
+            Únete a cientos de equipos que ya eliminaron el trabajo manual con Void.
           </p>
           <div className="mt-8 flex justify-center">
             <Button variant="glow" size="lg" className="text-base px-8" asChild>
