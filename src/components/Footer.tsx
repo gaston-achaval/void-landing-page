@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "@/components/Logo";
 
 const Footer = () => {
@@ -11,7 +12,7 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Privacidad</a>
+            <Link to="/privacidad" className="hover:text-foreground transition-colors">Privacidad</Link>
             <a href="#" className="hover:text-foreground transition-colors">Términos</a>
             <a href="#" className="hover:text-foreground transition-colors">Documentación</a>
             <a href="#" className="hover:text-foreground transition-colors">Contacto</a>
