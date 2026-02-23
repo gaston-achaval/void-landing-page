@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Conecta tus apps",
-    description: "Integra las herramientas que ya usas en minutos con nuestra API o conectores nativos.",
+    title: "Solicitá una demo",
+    description: "Coordinamos una reunión 1:1 y nos comentás los requerimientos de tu comercio para poder orientarte en la elección correcta de nuestros productos.",
     gradient: "text-gradient-cool",
   },
   {
