@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "@/components/Logo";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <Link to="/privacidad" className="hover:text-foreground transition-colors">Privacidad</Link>
             <Link to="/terminos" className="hover:text-foreground transition-colors">Términos</Link>
-            <a href="#" className="hover:text-foreground transition-colors">Contacto</a>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Contacto</a>
           </div>
 
           <p className="text-sm text-muted-foreground">
