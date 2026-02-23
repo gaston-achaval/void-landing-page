@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,6 +7,10 @@ const META_PRIVACY_URL = "https://www.facebook.com/privacy/policy/";
 const WHATSAPP_BUSINESS_PRIVACY_URL = "https://www.whatsapp.com/legal/business-app-privacy-policy";
 
 const Privacidad = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
