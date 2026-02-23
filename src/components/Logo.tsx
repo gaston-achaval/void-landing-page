@@ -8,12 +8,9 @@ const sizeClasses: Record<LogoSize, string> = {
 };
 
 /**
- * Logo de la marca. Si existe `public/logo.svg` o `public/logo.png`, se usa esa imagen.
- * Si no, se muestra el fallback con la "V" y el gradiente.
- * Para usar tu logo: coloca tu imagen en public/logo.svg o public/logo.png.
+ * Logo de la marca. Usa `public/logo.png`. Si falla la carga, se muestra el fallback con la "V" y el gradiente.
  */
 const Logo = ({ size = "md" }: { size?: LogoSize }) => {
-  const [tryPng, setTryPng] = useState(false);
   const [useFallback, setUseFallback] = useState(false);
   const sizeClass = sizeClasses[size];
 
@@ -31,13 +28,12 @@ const Logo = ({ size = "md" }: { size?: LogoSize }) => {
   }
 
   const base = import.meta.env.BASE_URL;
-  const logoSrc = tryPng ? `${base}logo.png` : `${base}logo.svg`;
   return (
     <img
-      src={logoSrc}
-      alt="Logo"
+      src={`${base}logo.png`}
+      alt="Logo void software"
       className={`${sizeClass} rounded-lg object-cover shrink-0`}
-      onError={() => (tryPng ? setUseFallback(true) : setTryPng(true))}
+      onError={() => setUseFallback(true)}
     />
   );
 };
