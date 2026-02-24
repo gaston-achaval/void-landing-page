@@ -36,8 +36,8 @@ jobs:
       - name: Build (static for GitHub Pages)
         run: npm run build
         env:
-          # Necesario para que rutas y assets carguen en username.github.io/repo-name/
-          BASE_PATH: /${{ github.event.repository.name }}/
+          # Dominio propio (void-ia.com): assets en raíz. Para repo en github.io usa: /repo-name/
+          BASE_PATH: /
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
