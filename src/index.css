@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+/* Fuentes (Space Grotesk, Inter): se cargan con <link> en index.html. Un @import acá, después de los
+   @tailwind, Vite lo descarta del build y el sitio quedaba con la fuente del sistema. */
 
 @layer base {
   :root {
