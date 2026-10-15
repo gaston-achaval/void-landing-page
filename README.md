@@ -29,11 +29,11 @@ El proyecto está preparado para publicarse como **sitio estático** en GitHub P
 2. En **Source** elige **GitHub Actions** (no "Deploy from a branch").
 3. Cada vez que hagas **push a la rama `main`**, GitHub Actions construirá el sitio y lo publicará.
 
-La URL quedará: `https://<tu-usuario>.github.io/void-automation-hub-15/`
+La URL quedará: `https://<tu-usuario>.github.io/void-landing-page/`
 
 Para probar el build estático en local antes de subir:
 ```bash
-BASE_PATH=/void-automation-hub-15/ npm run build
+BASE_PATH=/void-landing-page/ npm run build
 npm run preview
 ```
 Luego abre la URL que muestre `preview` (por ejemplo http://localhost:4173).
@@ -68,7 +68,7 @@ Para publicar en GitHub Pages, configura **Settings → Pages → Source: GitHub
 
 ## Dominio personalizado (URL más corta y bonita)
 
-La URL por defecto de GitHub Pages es larga: `https://<usuario>.github.io/void-automation-hub-15/`. Puedes usar un **dominio propio** (ej. `voidsoftware.com` o `void.so`) de forma gratuita:
+La URL por defecto de GitHub Pages es larga: `https://<usuario>.github.io/void-landing-page/`. Puedes usar un **dominio propio** (ej. `voidsoftware.com` o `void.so`) de forma gratuita:
 
 1. **Compra el dominio** en un registrador (Namecheap, Google Domains, Cloudflare, etc.).
 2. **En el repo**: crea el archivo `public/CNAME` (o `CNAME` en la raíz del repo, según la doc de GitHub) con una sola línea: tu dominio, ej. `www.voidsoftware.com`.
